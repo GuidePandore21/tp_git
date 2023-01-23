@@ -87,13 +87,13 @@ fetch(API_URL + "pokemon?limit=151")
                         ch.toUpperCase()
                     )} </h5>
 				<h5> ${pokemonTypes.map((type) => traduction[type])
-                        .join(" / ")
-                        .replace(/\b\w/g, (ch) => ch.toUpperCase())} </h5>
+                            .join(" / ")
+                            .replace(/\b\w/g, (ch) => ch.toUpperCase())} </h5>
 			</div>
 			`;
                     const pokemonCards = document.querySelectorAll(".pokemon-card");
                     const pokemonCard = pokemonCards[pokemonCards.length - 1];
-                    /*if (pokemonTypes[1]) {
+                    if (pokemonTypes[1]) {
                         pokemonCard.style.background =
                             "linear-gradient(150deg," +
                             colors[json.types[0].type.name] +
@@ -102,7 +102,7 @@ fetch(API_URL + "pokemon?limit=151")
                             " 50%)";
                     } else {
                         pokemonCard.style.background = colors[pokemonTypes[0]];
-                    }*/
+                    }
                 });
         });
     });
